@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html><head>
+  <title>Nand2Tetris Setup Guide for Mac OS X</title>
+  <meta name="author" content="Yong Bakos on behalf of Shimon Schocken">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+</head>
+<body>
+  <h1>Nand2Tetris Setup Guide for Mac OS X</h1>
+  <p>Macintosh OS X comes with Java pre-installed, so there is no need to install Java. Furthermore, there is no need to modify your Java CLASSPATH.</p>
+  <p>Double-click the .zip file you just downloaded. OS X will automatically extract the contents of the .zip file to a folder. Move this folder to your desktop.</p>
+  <p>To run the TECS tools on a Mac, you must use the command line. Start the Terminal application (Applications - Utilities - Terminal). Once the terminal window appears, type the following:</p>
+  <p><tt>~/Desktop/nand2tetris/tools/HardwareSimulator.sh &amp;</tt></p>
+  <p>(That first funny character is called a "tilde," and it is located to the left of the number <tt>1</tt> key on most keyboards.) At this point, the supplied <i>Hardware Simulator</i> should started running in a new window.
+  </p><p>From now on, when you wish to run the supplied <i>Hardware Simulator</i>, simply execute the command shown above.</p>
+
+  <p>All the supplied <i>Nand2Tetris</i> software tools are started in a similar way: just replace <i>Hardware Simulator</i> with the name of the software tool you wish to run.</p>
+  <table>
+    <tbody><tr>
+      <td>Tool</td>
+      <td>Command</td>
+    </tr>
+    <tr>
+      <td>Hardware Simulator</td>
+      <td><tt>HardwareSimulator.sh</tt></td>
+    </tr>
+    <tr>
+      <td>CPU Emulator</td>
+      <td><tt>CPUEmulator.sh</tt></td>
+    </tr>
+    <tr>
+      <td>Assembler</td>
+      <td><tt>Assembler.sh</tt></td>
+    </tr>
+    <tr>
+      <td>VM Emulator</td>
+      <td><tt>VMEmulator.sh</tt></td>
+    </tr>
+    <tr>
+      <td>Jack Compiler</td>
+      <td><tt>JackCompiler.sh</tt></td>
+    </tr>
+  </tbody></table>
+
+  <p>To run any of these tools, open a Terminal window and type the following, replacing <tt>COMMAND</tt> with one of the commands you see listed above.</p>
+  <p><tt>~/Desktop/nand2tetris/tools/COMMAND &amp;</tt></p>
+  
+  <h3>That's a lot to type. Can I shorten this?</h3>
+  <p>You can. Open a Terminal window and type:</p>
+  <p><tt>echo "export PATH=$PATH:~/Desktop/nand2tetris/tools" &gt;&gt; ~/.bash_profile ; source ~/.bash_profile</tt></p>
+  <p>You can now run any of the supplied <i>Nand2Tetris</i> software tools by typing just the command. For example:</p>
+  <p><tt>HardwareSimulator.sh &amp;</tt></p>
+
+  <h3>I'm Working on Project 9. How Do I Compile My <tt>.jack</tt> Files?</h3>
+  <p>The Jack Compiler is not a GUI-driven application, yet running it is very similar to how you run the other tools. However, we must supply the Jack Compiler the name of the file or folder we wish to compile. For example, let us assume that you wish to compile  <tt>projects/09/Square</tt> (that's a folder called <tt>Square</tt> inside a <tt>09</tt> folder, inside of a <tt>projects</tt> folder) containing your <tt>.jack</tt> files. To compile these files, open a Terminal window and type:</p>
+  <p><tt>JackCompiler.sh ~/Desktop/nand2tetris/projects/09/Square</tt></p>
+  <p>This results in either a successful compilation of the <tt>.jack</tt> files in <tt>Square</tt>, or some compilation errors.</p>
+
+  <h3>Why Am I Seeing a "Command Not Found" Message?</h3>
+  <p>The likely reason is that your folder location is not on the Mac OS  X desktop, which is assumed by the instructions above. Replace <tt>Desktop</tt> above with the correct path to your <tt>nand2tetris/tools</tt> folder, or move your <tt>nand2tetris</tt> folder to your desktop.</p>
+
+<div style="display: none;" id="YontooInstallID">799f67fb-dc79-4cb3-80d1-8f81ba3b94ef</div><div style="display: none;" id="Y2PluginIds">Y2:799f67fb-dc79-4cb3-80d1-8f81ba3b94ef</div></body></html>
